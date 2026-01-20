@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:layout_width="@dimen/_150sdp"-->
+    <!--        app:cardCornerRadius="@dimen/_5sdp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        android:id="@+id/cardView"-->
+    <!--        android:elevation="@dimen/_5sdp"-->
+    <!--        android:padding="@dimen/_10sdp"-->
+    <!--        app:cardBackgroundColor="@color/white"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:layout_height="@dimen/_80sdp">-->
+    <!--    <FrameLayout-->
+    <!--        android:layout_width="@dimen/_160sdp"-->
+    <!--        android:layout_height="@dimen/_80sdp"-->
+    <!--        android:background="@drawable/child_list_shape"-->
+    <!--        android:elevation="@dimen/_15sdp"-->
+    <!--       >-->
+    <RelativeLayout
+        android:id="@+id/rlMonthSelector"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/tv_busNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_care_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_busNo"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@android:color/black"
+            android:textStyle="normal"/>
+        <TextView
+            android:id="@+id/tv_care_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_care_name"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="normal"
+            android:layout_alignParentLeft="true" />
+        <ImageView
+            android:id="@+id/call"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_margin="5dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/phone_call"
+            app:tint="@color/colorPrimary" />
+
+    </RelativeLayout>
+    <!--    </FrameLayout>-->
+    <!--    </androidx.cardview.widget.CardView>-->
+</RelativeLayout>

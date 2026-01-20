@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00796B</color>
+    <color name="colorAccent">#FFC107</color>-->
+
+    <!--<color name="colorPrimary">#FF03A9F4</color>
+    <color name="colorPrimaryDark">#ff0171c9</color>-->
+    <!--<color name="colorAccent">#FF00E5FF</color>-->
+    <color name="colorControlNormal">#FF78909C</color>
+    <color name="colorControlActivated">#FF03A9F4</color>
+    <color name="colorSwitchThumbNormal">#FF78909C</color>
+
+    <color name="colorPrimaryQuarter">#3303A9F4</color>
+    <color name="colorPrimaryHalf">#9003A9F4</color>
+    <color name="colorControlNormalHalf">#9078909C</color>
+    <color name="colorControlActivatedHalf">#9003A9F4</color>
+    <color name="colorAccentQuarter">#3300E5FF</color>
+    <color name="colorAccentHalf">#9000E5FF</color>
+
+    <array name="progress_colors_light">
+        <item>#FF03A9F4</item>
+        <item>#FFD8433C</item>
+        <item>#FFF2AF3A</item>
+        <item>#FF279B5E</item>
+    </array>
+
+    <array name="progress_colors_dark">
+        <item>#FF00E5FF</item>
+        <item>#ffd81d5a</item>
+        <item>#fff27512</item>
+        <item>#ff63bc34</item>
+    </array>
+
+    <array name="in_colors_light">
+        <item>#4B03A9F4</item>
+        <item>#3303A9F4</item>
+        <item>#1903A9F4</item>
+    </array>
+
+    <array name="in_colors_dark">
+        <item>#4B00E5FF</item>
+        <item>#3300E5FF</item>
+        <item>#1900E5FF</item>
+    </array>
+
+    <color name="tpi_checked">#FFFFFFFF</color>
+    <color name="tpi_unchecked">#99FFFFFF</color>
+
+    <color name="et_divider_focused">@color/colorControlActivated</color>
+    <color name="et_divider_not_focused">#FF6D6D6D</color>
+    <color name="et_divider_disable">#FFC1C1C1</color>
+
+
+    <!-- old data -->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_black">#BB000000</color>
+    <color name="transparent_half">#80000000</color>
+    
+    <color name="grey">#757475</color>
+    <color name="grey_light">#D3D3D3</color>
+    <color name="grey_thin">#57D3D3D3</color>
+    <color name="menu">#edecec</color>
+    <!--<color name="menu">#E3E3E3</color>-->
+
+    <color name="menu_item">#AAAAAA</color>
+    <color name="green">#8FCC85</color>
+
+    <color name="dark_light_green">#228B22</color>
+    <color name="dark_green">#006400</color>
+    <color name="blue">#ff33b5e5</color>
+    <color name="theme_blue">#008AC8</color>
+    <color name="theme_deselected">#B0E0E6</color>
+    <color name="green_500">#4CAF50</color>
+
+
+
+    <color name="black">#000000</color>
+    <color name="unchecked_background">#1AB0F3</color>
+    <color name="white">#ffffff</color>
+    <color name="bw_yellow">#FDB92E</color>
+    <color name="light_white">#f9f9f9</color>
+	<color name="red">#DF0000</color>
+	<color name="light_blue">#00CCFF</color>
+    <color name="orange">#FCA435</color>
+    <color name="light_orange">#F1C40F</color>
+	<color name="subheader_gray">#848387</color>
+    <color name="grey_black">#353535</color>
+    <color name="grey_shades">#F2F3F5</color>
+    <color name="grey_trout">#505059</color>
+    <color name="grey_aluminium">#888892</color>
+    <color name="dark_shades">#212125</color>
+
+	<color name="caldroid_white">#FFFFFF</color>
+    <color name="caldroid_black">#000000</color>
+    <color name="caldroid_transparent">#00000000</color>
+    <!-- For settings framework -->
+    <color name="caldroid_lighter_gray">#ddd</color>
+    <color name="caldroid_gray">#CCC</color>
+    <color name="caldroid_darker_gray">#aaa</color>
+    <!-- A light Holo shade of blue -->
+    <color name="caldroid_holo_blue_light">#ff33b5e5</color>
+    <!-- A dark Holo shade of blue -->
+    <color name="caldroid_holo_blue_dark">#ff0099cc</color>
+    <!-- A really bright Holo shade of blue -->
+    <color name="caldroid_sky_blue">#FFA3E8F7</color>
+
+
+    <!-- Citrus paymeny -->
+    <color name="profile_selected">#FF03A9F4</color>
+    <color name="dark_button_color">#48baff</color>
+
+    <!--Attendance -->
+    <color name="attendance_late_arrival">#33DAFF</color>
+    <color name="attendance_half_day">#FFFC33</color>
+    <color name="attendance_leave">#DD3131</color>
+    <color name="early_going">#C4A484</color>
+    <color name="outdoor">#4169E1</color>
+
+
+    <!--introscreen -->
+    <color name="slide_1">#4f91ff</color>
+    <color name="slide_2">#fb9c25</color>
+    <color name="slide_3">#5ab55d</color>
+    <color name="slide_4">#ea2d6d</color>
+
+
+    <!-- Yellow Button Color Code -->
+    <color name="yellow_button">#E5A544</color>
+
+    <!-- Cart Size Blue color -->
+    <color name="product_size_light_blue_color">#ccffff</color>
+    <color name="divider_bar_color">#BDBDBD</color>
+
+    <color name="multiple_image_select_primary">@color/colorPrimary</color>
+    <color name="multiple_image_select_primaryDark">@color/colorPrimaryDark</color>
+    <color name="tutorial_buttonTextColor">@color/colorPrimaryDark</color>
+    <!-- material Color code -->
+    <color name="color_red_500">#F44336</color>
+    <color name="color_pink_500">#E91E63</color>
+    <color name="color_purple_500">#9C27B0</color>
+    <color name="color_deep_purple_500">#673AB7</color>
+    <color name="color_indigo_500">#3F51B5</color>
+    <color name="color_blue_500">#2196F3</color>
+    <color name="color_teal_500">#009688</color>
+    <color name="color_green_600">#43A047</color>
+
+    <!-- Tab Color -->
+    <color name="colorTextPrimary">#FFFFFF</color>
+    <color name="colorTextDisable">#33000000</color>
+    <color name="colorDisable">#aaa</color>
+    <color name="foreground_material_light">#000000</color>
+    <color name="warning_color">#C1484C</color>
+
+    <color name="grey_request_background">#D4CCFF</color>
+    <color name="payment_gateway_background_color">#e5e5e5</color>
+    <color name="border_color_power_by">#8D80D9</color>
+</resources>

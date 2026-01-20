@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="keyboard_height">230dip</dimen>
+    <dimen name="default_cell_height">85dip</dimen>
+
+    <dimen name="drawer_width">240dp</dimen>
+    <dimen name="drawer_text">20sp</dimen>
+    <dimen name="title_text">16sp</dimen>
+
+    <dimen name="bt_height">36dp</dimen>
+
+    <!-- Citrus Button -->
+    <dimen name="button_margin">8dp</dimen>
+
+    <!-- School Diary Font-->
+    <dimen name="font_size_x_extra_small">8sp</dimen>
+    <dimen name="font_size_extra_small">10sp</dimen>
+    <dimen name="font_size_small">12sp</dimen>
+    <dimen name="font_size_normal">14sp</dimen>
+    <dimen name="font_size_large">16sp</dimen>
+    <dimen name="font_size_extra_large">18sp</dimen>
+    <dimen name="font_size_x_extra_large">20sp</dimen>
+    <dimen name="font_size_extra">28sp</dimen>
+    <dimen name="font_size_xxx_extra_large">32sp</dimen>
+    <dimen name="dimen_15_sp">15sp</dimen>
+    <dimen name="dimen_8_dp">8dp</dimen>
+    <dimen name="dimen_16_dp">16dp</dimen>
+    <dimen name="dimen_30_dp">30dp</dimen>
+    <dimen name="dimen_40_dp">40dp</dimen>
+    <dimen name="dimen_5_dp">5dp</dimen>
+    <dimen name="dimen_15_dp">15dp</dimen>
+    <dimen name="dimen_16_sp">16sp</dimen>
+    <dimen name="dimen_20_dp">20dp</dimen>
+    <dimen name="dimen_12_sp">12sp</dimen>
+    <dimen name="dimen_50_dp">50dp</dimen>
+    <dimen name="citrus_activity_horizontal_margin">5dp</dimen>
+
+
+    <!-- Fab icon -->
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="overlap_pager_margin">-60dp</dimen>
+
+
+    <!-- New Home page  -->
+    <dimen name="activity_margin_content">12dp</dimen>
+    <dimen name="appbar_header_height">256dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+</resources>
