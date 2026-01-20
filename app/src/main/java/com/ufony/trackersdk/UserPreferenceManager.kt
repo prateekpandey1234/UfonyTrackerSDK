@@ -247,8 +247,7 @@ object UserPreferenceMangerKeys{
     const val ID_NEWER_THAN = "newer_than_id"
     const val ID_OLDER_THAN = "older_than_id"
 
-    // DEFAULT_AUTH="Basic YWtzaGF5QGdtYWlsLmNvbTpha3NoYXkxMjM=";
-    const val DEFAULT_AUTH = "Basic YWtzaGF5QGdtYWlsLmNvbTpha3NoYXkxMjM="
+
     const val SCHOOL_DETAILS = "school_details"
     const val USER_ROLE = "userrole"
     const val SUMMARY = "summary"
