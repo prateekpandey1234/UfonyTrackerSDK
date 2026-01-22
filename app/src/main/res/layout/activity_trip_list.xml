@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.v2.TripListActivity">
+    tools:context=".TripListActivity">
 
     <RelativeLayout
         android:id="@+id/root_layout"
@@ -20,10 +20,10 @@
 
             <ImageView
                 android:id="@+id/tripList_backBtn"
-                android:layout_width="@dimen/_20sdp"
+                android:layout_width="@dimen/dimen_20_dp"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/dimen_5_dp"
                 android:src="@drawable/btn_back"
                 app:tint="@color/white"
                 />
@@ -40,8 +40,8 @@
                 android:textSize="@dimen/font_size_extra_large"
                 android:textStyle="bold" />
             <ImageView
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_30sdp"
+                android:layout_width="@dimen/dimen_20_dp"
+                android:layout_height="@dimen/dimen_30_dp"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/tv_toolbar"
                 android:src="@drawable/down_arrow_black_tracker" />
@@ -103,7 +103,7 @@
             android:layout_height="match_parent"
             android:visibility="gone"
             android:layout_below="@id/progressBar"
-            android:layout_margin="@dimen/_10sdp" />
+            android:layout_margin="10dp" />
 
 
         <TextView
