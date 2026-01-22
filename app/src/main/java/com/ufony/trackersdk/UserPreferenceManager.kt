@@ -3,15 +3,11 @@ package com.ufony.trackersdk
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.net.Uri
-import android.text.TextUtils
 import android.util.Log
 import androidx.core.content.edit
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
-import java.util.*
-import kotlin.collections.ArrayList
 
 class UserPreferenceManager private constructor(private val prefName: String, private val userId: Long, private val context: Context) {
     companion object {
@@ -372,6 +368,11 @@ object UserPreferenceMangerKeys{
     //Survey
     const val SURVEY_QUESTION_ID = "question_id"
     const val SURVEY_CHILD_ID = "child_id"
+
+
+    const val SDK_LIBRARY_USER_ID: String = "userId"
+
+    const val SDK_LIBRARY_AUTH_HEADER: String = "authHeader"
 }
 
 fun Any.toJson() = Gson().toJson(this)

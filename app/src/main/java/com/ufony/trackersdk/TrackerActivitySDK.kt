@@ -2,6 +2,7 @@ package com.ufony.trackersdk
 
 import android.animation.ObjectAnimator
 import android.animation.TypeEvaluator
+import android.app.Application
 import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
@@ -24,6 +25,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.Observer
 import androidx.lifecycle.OnLifecycleEvent
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.transition.AutoTransition
 import androidx.transition.TransitionManager
@@ -105,10 +107,16 @@ class TrackerActivitySDK( ) :AppCompatActivity(), OnMapReadyCallback, CoroutineS
         progress_layout= findViewById(R.id.progress_layout)
         progressBar= findViewById(R.id.progress_fetching_trip)
         val pref = UserPreferenceManager.forUser(forUserId, this)
+        loggedInUserId = intent.getLongExtra(UserPreferenceMangerKeys.SDK_LIBRARY_USER_ID,0L)
+        val authorisation = intent.getStringExtra(UserPreferenceMangerKeys.SDK_LIBRARY_AUTH_HEADER)
+        if(authorisation==null || authorisation.isBlank() || authorisation.isEmpty() || loggedInUserId==0L){
+            Toast.makeText(this,"Login failed try again !",Toast.LENGTH_SHORT).show()
+            finish()
+        }
 
-        trackerActivityViewModel = ViewModelProvider(this).get(TrackerActivitySDKViewModel::class.java)
-         val notificationManager =
-            getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        val factory = TrackerViewModelFactory(application, loggedInUserId, authorisation!!)
+
+        trackerActivityViewModel = ViewModelProvider(this,factory).get(TrackerActivitySDKViewModel::class.java)
         Log.d("OnResumeCalled", "ACTIVITYLIFECYCLE===OnCreate")
         statusContainerFrame = findViewById(R.id.statusContainerFrame)
         statusContainerFrame.createCircularReveal(1000)
@@ -125,6 +133,7 @@ class TrackerActivitySDK( ) :AppCompatActivity(), OnMapReadyCallback, CoroutineS
                 }
         })
         val prefs = UserPreferenceManager.forUser(forUserId, this)
+        prefs.authorisation = authorisation
         val i = intent
         val bundle = i.extras
         if (bundle != null) {
@@ -764,5 +773,21 @@ class TrackerLocationListener(val lifecycle: Lifecycle, private val signalRRootU
         mHubConnection = null
         state = TrackerLocationListenerState.Disconnected
         Log.d(TAG, "stopSignalR after mHubConnection?.stop()")
+    }
+}
+
+class TrackerViewModelFactory(
+    private val application: Application,
+    private val userId: Long,
+    private val authorisation: String
+) : ViewModelProvider.Factory {
+
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(TrackerActivitySDKViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            // This is where we manually create the instance
+            return TrackerActivitySDKViewModel(userId, authorisation, application) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
     }
 }

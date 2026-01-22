@@ -321,7 +321,7 @@ class TrackerActivitySDKViewModel(val userId:Long,val authorisation: String,val 
 object RetrofitClient {
 
     // Define your Base URL here
-    private const val BASE_URL = "https://your.api.url/"
+    private const val BASE_URL = "https://web.zoment.com/euro/api/"
       private const val API_VERSION: String = "api-version"
      private const val API_VERSION_VALUE: String = "21"
 
