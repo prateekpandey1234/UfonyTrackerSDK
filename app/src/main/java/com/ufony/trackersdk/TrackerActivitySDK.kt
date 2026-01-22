@@ -297,6 +297,8 @@ class TrackerActivitySDK( ) :AppCompatActivity(), OnMapReadyCallback, CoroutineS
         binding.tvToolbar.setOnClickListener {
 
             intent = Intent(this, TripListActivity::class.java)
+            intent.putExtra(UserPreferenceMangerKeys.SDK_LIBRARY_USER_ID,loggedInUserId)
+            intent.putExtra(UserPreferenceMangerKeys.SDK_LIBRARY_AUTH_HEADER,authorisation)
             startActivity(intent)
             finish()
         }

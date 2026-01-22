@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
@@ -42,6 +43,7 @@ class TripListActivity : AppCompatActivity(), CoroutineScope {
     protected var loggedInUserId = 0L
     var prefs: UserPreferenceManager? = null
     private var context: Context? = null
+    private var authorisation: String? = null
 
     private var progressBar: ProgressBar?=null
     private var noRoutes: TextView?=null
@@ -49,7 +51,15 @@ class TripListActivity : AppCompatActivity(), CoroutineScope {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         setContentView(R.layout.activity_trip_list)
+        loggedInUserId = intent.getLongExtra(UserPreferenceMangerKeys.SDK_LIBRARY_USER_ID,0L)
+        authorisation = intent.getStringExtra(UserPreferenceMangerKeys.SDK_LIBRARY_AUTH_HEADER)
+        if(authorisation==null || authorisation!!.isBlank() || authorisation!!.isEmpty() || loggedInUserId==0L){
+            Toast.makeText(this,"Login failed try again !", Toast.LENGTH_SHORT).show()
+            finish()
+        }
         context = this
+        val factory = TrackerViewModelFactory(application, loggedInUserId, authorisation!!)
+
         trackerActivityViewModel = ViewModelProvider(this).get(TrackerActivitySDKViewModel::class.java)
 
         prefs = forUser(loggedInUserId, this)
