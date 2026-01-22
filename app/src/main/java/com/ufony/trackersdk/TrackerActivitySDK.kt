@@ -309,7 +309,7 @@ class TrackerActivitySDK( ) :AppCompatActivity(), OnMapReadyCallback, CoroutineS
     }
 
     override fun onMapReady(p0: GoogleMap?) {
-        this.googleMap = googleMap
+        this.googleMap = p0
 
         if (googleMap == null) {
             Toast.makeText(applicationContext, "Sorry! unable to access map.", Toast.LENGTH_SHORT).show()
