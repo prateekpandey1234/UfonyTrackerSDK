@@ -60,7 +60,7 @@ class TripListActivity : AppCompatActivity(), CoroutineScope {
         context = this
         val factory = TrackerViewModelFactory(application, loggedInUserId, authorisation!!)
 
-        trackerActivityViewModel = ViewModelProvider(this).get(TrackerActivitySDKViewModel::class.java)
+        trackerActivityViewModel = ViewModelProvider(this,factory).get(TrackerActivitySDKViewModel::class.java)
 
         prefs = forUser(loggedInUserId, this)
         val intent = intent

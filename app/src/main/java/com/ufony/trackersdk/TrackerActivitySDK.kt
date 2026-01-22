@@ -83,8 +83,7 @@ class TrackerActivitySDK( ) :AppCompatActivity(), OnMapReadyCallback, CoroutineS
     private var dialogData = ArrayList<RouteStopAlertDialogPojo>()
     private lateinit var alertDialogAdapter: RouteStopAlertDialogAdapter
     private var alertDistanceDialog: AlertDialog? = null
-    private val forUserId :Long  = 0
-     private lateinit var tv_trips: TextView
+      private lateinit var tv_trips: TextView
     private lateinit var tv_trips1: TextView
     private var singleTrip: String? = null
     private lateinit var optionMenu_btn: ImageButton
@@ -106,7 +105,7 @@ class TrackerActivitySDK( ) :AppCompatActivity(), OnMapReadyCallback, CoroutineS
         optionMenu_btn = findViewById(R.id.btn_navMore)
         progress_layout= findViewById(R.id.progress_layout)
         progressBar= findViewById(R.id.progress_fetching_trip)
-        val pref = UserPreferenceManager.forUser(forUserId, this)
+        val pref = UserPreferenceManager.forUser(loggedInUserId, this)
         loggedInUserId = intent.getLongExtra(UserPreferenceMangerKeys.SDK_LIBRARY_USER_ID,0L)
         val authorisation = intent.getStringExtra(UserPreferenceMangerKeys.SDK_LIBRARY_AUTH_HEADER)
         if(authorisation==null || authorisation.isBlank() || authorisation.isEmpty() || loggedInUserId==0L){
@@ -132,7 +131,7 @@ class TrackerActivitySDK( ) :AppCompatActivity(), OnMapReadyCallback, CoroutineS
                     alreadyDrawnRoutes.add(route.key)
                 }
         })
-        val prefs = UserPreferenceManager.forUser(forUserId, this)
+        val prefs = UserPreferenceManager.forUser(loggedInUserId, this)
         prefs.authorisation = authorisation
         val i = intent
         val bundle = i.extras
@@ -542,7 +541,7 @@ class TrackerActivitySDK( ) :AppCompatActivity(), OnMapReadyCallback, CoroutineS
 
     override fun onDestroy() {
         sJob.cancelChildren()
-        val prefs = UserPreferenceManager.forUser(forUserId, this)
+        val prefs = UserPreferenceManager.forUser(loggedInUserId, this)
         prefs.trips = null
         super.onDestroy()
     }
