@@ -63,7 +63,7 @@ interface ITrackerTask {
 interface TripsService {
 
     @POST("trip/subscribe/{connectionId}")
-    fun postSubscribe(@Header("Authorization") forUserId: Long, @Path("connectionId") connectionId: String, @Query("routeIds") routeId: Long?, @Query("useSignalRCore") useSignalRCore: Boolean): Call<Subscription>
+    fun postSubscribe(@Header("user-id") forUserId: Long, @Path("connectionId") connectionId: String, @Query("routeIds") routeId: Long?, @Query("useSignalRCore") useSignalRCore: Boolean): Call<Subscription>
     @GET("trip/activetrips")
     fun getActiveRoutes(@Header("user-id") forUserId: Long): Call<ActiveRoutes>
 }
